@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "An example api.",
+    "title": "Lower Case API",
+    "version": ""
+  },
+  "servers": [
+    {
+      "url": "http://api.lowercase.sample.com/v1"
+    }
+  ],
+  "paths": {
+    "/a1/grab": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Description of the first parameter.",
+            "in": "query",
+            "name": "param1",
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    },
+    "/a1/grab/{userId}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Description of the first parameter.",
+            "in": "query",
+            "name": "param1",
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          },
+          {
+            "description": "The userId parameter that is in the URI.",
+            "in": "query",
+            "name": "userId",
+            "schema": {
+              "default": "",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    }
+  }
+}
